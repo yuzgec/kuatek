@@ -63,7 +63,7 @@
                                     @endif
                                 </div>
 
-                            <div style="margin-top:-30px">
+                            <div>
                                 <i class="icon-truck"></i> Bugün <b>({{$Count}})</b> kişi baktı<br>
                                 <i class="icon-eye"></i> Aynı gün kargoda<br>
                                 <i class="icon-info-circle"></i> Güvenli Ödeme
@@ -119,7 +119,7 @@
                 <aside class="col-lg-3">
                     <div class="sidebar sidebar-product">
                         <div class="widget widget-products">
-                            <h4 class="widget-title">İlgili Kitaplar</h4>
+                            <h4 class="widget-title">İlgili Ürünler</h4>
 
                             <div class="products">
                                 @foreach($Productssss->take(5) as $item)
@@ -187,7 +187,6 @@
                                             <p>İade etmek istediğiniz ürünler için iade talebi oluşturduktan sonra talebiniz şirketimizin onayı için iletilir. Sistem tarafından verilen kargo koduyla ürünler müşteri tarafından kargoya verilir. Şirketimiz, ürünlerin kendisine ulaşması sonrasında iade talebini onaylar veya gerekçenin geçerli olmaması durumunda bunu reddeder. Onay halinde para iadesi gerçekleştirilir.</p>
                                             <br><p>Para İadesi: Kredi Kartı, Banka Kartı veya Puanla Yapılan Ödemelerin İadesi</p>
                                             <p>Kredi kartı veya banka kartı ile yapılan ödemelerin iadesi ödemenin yapıldığı karta gerçekleştirilir. Alışverişin yapıldığı aynı gün içerisinde yapılan iadeler bazı bankalar tarafından hesap ekstresine yansıtılmayarak alışveriş kaydı doğrudan iptal edilebilmektedir. Ayrıca para iadelerinin hesap ekstrelerine veya hesaba yansıtılması bankadan bankaya değişmekte ve 1-15 gün arasında sürebilmektedir. Hesap ekstrenizde göremediğiniz iptal-iade işlemleriniz için öncelikle bankanıza danışmalısınız.</p>
-                                            TBKİTAP
                                         </div>
                                     </div>
                                 </div>
