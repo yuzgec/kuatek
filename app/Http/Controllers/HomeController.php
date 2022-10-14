@@ -5,24 +5,17 @@ namespace App\Http\Controllers;
 use App\Http\Requests\MailRequest;
 use App\Http\Requests\OrderRequest;
 use App\Http\Requests\SearchRequest;
-use App\Models\Author;
 use App\Models\Basket;
 use App\Models\Favorite;
-use App\Models\Language;
 use App\Models\MailSubcribes;
 use App\Models\Order;
 use App\Models\Page;
 use App\Models\Product;
 use App\Models\ProductCategory;
 use App\Models\ProductCategoryPivot;
-use App\Models\Publisher;
 use App\Models\Search;
 use App\Models\ShopCart;
 use App\Models\Slider;
-use App\Models\Translator;
-use App\Models\User;
-use App\Models\Years;
-use Barryvdh\Debugbar\Facades\Debugbar;
 use Carbon\Carbon;
 use CyrildeWit\EloquentViewable\Support\Period;
 use Gloudemans\Shoppingcart\Facades\Cart;
@@ -36,7 +29,6 @@ use Iyzipay\Model\BasketItem;
 use Iyzipay\Model\Buyer;
 use Iyzipay\Model\CheckoutFormInitialize;
 use Iyzipay\Options;
-use Illuminate\Database\Eloquent\Builder;
 
 class HomeController extends Controller
 {
@@ -65,7 +57,7 @@ class HomeController extends Controller
             ->where('slug',request()->segment(2))
             ->first();
 
-        SEOTools::setTitle($Detay->title);
+        SEOTools::setTitle($Detay->title.' | Türkiye’nin ilk ve Tek Berber ve Kuaförlere özel pazaryeridir.');
         SEOTools::setDescription($Detay->seo_desc);
         SEOTools::opengraph()->setUrl(url()->current());
         SEOTools::setCanonical(route('urun', $Detay->slug));
@@ -105,7 +97,7 @@ class HomeController extends Controller
     }
     public function kategori($url){
         $Detay = ProductCategory::where('id', \request('id'))->select('id','title','slug')->first();
-        SEOTools::setTitle($Detay->title);
+        SEOTools::setTitle($Detay->title.' | Türkiye’nin ilk ve Tek Berber ve Kuaförlere özel pazaryeridir.');
         SEOTools::setDescription($Detay->seo_desc);
         SEOTools::opengraph()->setUrl(url()->current());
         SEOTools::setCanonical(route('urun', $Detay->slug));
@@ -127,8 +119,8 @@ class HomeController extends Controller
     }
 
     public function sepet(){
-        SEOTools::setTitle("Sepetim | Online 2. El Kitap". config('app.name'));
-        SEOTools::setDescription('Tb Kitap 2. El Kitap Kulübü |  Sepetim Sayfası');
+        SEOTools::setTitle("Sepetim | ". config('app.name'));
+        SEOTools::setDescription('Türkiye’nin ilk ve Tek Berber ve Kuaförlere özel pazaryeridir. |  Sepetim Sayfası');
 
         if (Cart::instance('shopping')->content()->count() === 0){
             return redirect()->route('home');
@@ -147,8 +139,8 @@ class HomeController extends Controller
     public function odeme(OrderRequest $gelen)
     {
 
-        SEOTools::setTitle("Ödeme | Online 2. El Kitap". config('app.name'));
-        SEOTools::setDescription('Tb Kitap 2. El Kitap Ödeme Sayfası');
+        SEOTools::setTitle("Ödeme | ". config('app.name'));
+        SEOTools::setDescription('Türkiye’nin ilk ve Tek Berber ve Kuaförlere özel pazaryeridir.');
 
         if (request()->isMethod('get')) {
             return redirect()->route('home');
@@ -303,8 +295,8 @@ class HomeController extends Controller
     }
     public function search(SearchRequest $request){
 
-        SEOTools::setTitle($request->q." ile ilgili arama sonuçları | Online 2. El Kitap | ". config('app.name'));
-        SEOTools::setDescription('Tb Kitap 2. El Kitap Klübü Arama Sayfası');
+        SEOTools::setTitle($request->q." ile ilgili arama sonuçları | Kuatek Berber ve Kuaför Ürünleri");
+        SEOTools::setDescription('Türkiye’nin ilk ve Tek Berber ve Kuaförlere özel pazaryeridir.');
 
         $search = $request->q;
 
@@ -378,8 +370,8 @@ class HomeController extends Controller
         return redirect()->route('favori');
     }
     public function favori(){
-        SEOTools::setTitle('Favori Listem | Online 2. El Kitap | '. config('app.name'));
-        SEOTools::setDescription('Tb Kitap Detaylı 2. El Kitap Klübü Arama Sayfası');
+        SEOTools::setTitle('Favori Listem | '. config('app.name'));
+        SEOTools::setDescription('Türkiye’nin ilk ve Tek Berber ve Kuaförlere özel pazaryeridir.');
 
         $Favorite = Favorite::select('product_id')->where('user_id', auth()->user()->id)->get()->toArray();
         $FavoriteBooks = Product::select('id', 'title', 'price', 'old_price', 'slug','bestselling','status')
@@ -414,7 +406,7 @@ class HomeController extends Controller
     public function iletisim(){
 
         SEOTools::setTitle("İletişim | ". config('app.name'));
-        SEOTools::setDescription('Tb Kitap İletişim Sayfası');
+        SEOTools::setDescription('Kuatek İletişim Sayfası');
 
         return view('frontend.page.contactus');
     }

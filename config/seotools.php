@@ -11,9 +11,9 @@ return [
          * The default configurations to be used by the meta generator.
          */
         'defaults'       => [
-            'title'        => "Kuatek", // set false to total remove
+            'title'        => "Kuatek Berber ve Kuaförlere Özel Online Alışveriş Sitesi", // set false to total remove
             'titleBefore'  => false, // Put defaults.title before page title, like 'Kuatek - Dashboard'
-            'description'  => 'Kuatek ', // set false to total remove
+            'description'  => 'Türkiye’nin ilk ve Tek Berber ve Kuaförlere özel pazaryeridir. ', // set false to total remove
             'separator'    => ' - ',
             'keywords'     => [],
             'canonical'    => false, // Set to null or 'full' to use Url::full(), set to 'current' to use Url::current(), set false to total remove
@@ -23,14 +23,13 @@ return [
          * Webmaster tags are always added.
          */
         'webmaster_tags' => [
-            'google'    => null,
+            'google'    => 'qer1hqO57YD4HbEAizb7bk9V7iUBq9Kwl8u2DotizJg',
             'bing'      => null,
             'alexa'     => null,
             'pinterest' => null,
             'yandex'    => null,
             'norton'    => null,
         ],
-
         'add_notranslate_class' => false,
     ],
     'opengraph' => [
@@ -38,8 +37,8 @@ return [
          * The default configurations to be used by the opengraph generator.
          */
         'defaults' => [
-            'title'        => "Kuatek", // set false to total remove
-            'description' => 'Kuatek', // set false to total remove
+            'title'        => "Kuatek Berber ve Kuaförlere Özel Online Alışveriş Sitesi", // set false to total remove
+            'description'  => 'Türkiye’nin ilk ve Tek Berber ve Kuaförlere özel pazaryeridir. ', // set false to total remove
             'url'         => false, // Set null for using Url::current(), set false to total remove
             'type'        => false,
             'site_name'   => false,
@@ -60,8 +59,8 @@ return [
          * The default configurations to be used by the json-ld generator.
          */
         'defaults' => [
-            'title'        => "Kuatek", // set false to total remove
-            'description' => 'Kuatek', // set false to total remove
+            'title'        => "Kuatek Berber ve Kuaförlere Özel Online Alışveriş Sitesi", // set false to total remove
+            'description'  => 'Türkiye’nin ilk ve Tek Berber ve Kuaförlere özel pazaryeridir. ', // set false to total remove
             'url'         => false, // Set to null or 'full' to use Url::full(), set to 'current' to use Url::current(), set false to total remove
             'type'        => 'WebPage',
             'images'      => [],
