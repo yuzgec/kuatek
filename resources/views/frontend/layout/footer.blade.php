@@ -2,7 +2,7 @@
 <footer class="footer footer-2">
 
 
-    <div class="footer-newsletter bg-image" style="background-image: url(/frontend/assets/images/backgrounds/bg-2.jpg)">
+    <div class="footer-newsletter bg-image" style="background-image: url(/frontend/assets/images/backgrounds/bg-2.jpg)" id="abone">
         <div class="container">
             <div class="heading text-center">
                 <h3 class="title">Haber Bülteminize Katılın</h3>
@@ -15,7 +15,7 @@
                         @csrf
                         <div class="input-group">
                             <input value="{{old('email_address')}}"
-                                   name="email"
+                                   name="email_address"
                                    class="form-control"
                                    placeholder="Email Adresinizi Giriniz">
 

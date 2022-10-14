@@ -25,4 +25,9 @@ class MailRequest extends FormRequest
             'email_address.unique'              => 'Email adresi daha önce eklenmiş',
         ];
     }
+
+    protected function getRedirectUrl()
+    {
+        return parent::getRedirectUrl() .'#abone';
+    }
 }
