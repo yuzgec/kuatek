@@ -101,7 +101,7 @@ class HomeController extends Controller
                 ]
             ]);
 
-        return view('frontend.product.index', compact('Detay','Count', 'Productssss','Author', 'Pivot', 'Category', 'OtherCategory'));
+        return view('frontend.product.index', compact('Detay','Count', 'Productssss', 'Pivot', 'Category', 'OtherCategory'));
     }
     public function kategori($url){
         $Detay = ProductCategory::where('id', \request('id'))->select('id','title','slug')->first();
