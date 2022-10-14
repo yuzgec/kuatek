@@ -14,6 +14,4 @@
 <link rel="stylesheet" href="/frontend/assets/css/skins/skin-demo-2.css">
 <link rel="stylesheet" href="/frontend/assets/css/demos/demo-2.css">
 <link rel="stylesheet" href="/frontend/assets/css/plugins/nouislider/nouislider.css">
-@vite(['resources/css/app.css', 'resources/js/app.js'])
-
 <livewire:styles />
