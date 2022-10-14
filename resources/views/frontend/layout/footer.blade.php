@@ -6,7 +6,7 @@
         <div class="container">
             <div class="heading text-center">
                 <h3 class="title">Haber Bülteminize Katılın</h3>
-                <p class="title-desc">Sitemize yüklenen kitap ve ürünlerden ilk siz haberdar olun</p>
+                <p class="title-desc">Sitemizdeki ürün ve kampanyalardan ilk siz haberdar olun</p>
             </div>
 
             <div class="row">
@@ -44,7 +44,6 @@
             <div class="row">
                 <div class="col-sm-12 col-lg-6">
                     <div class="widget widget-about">
-                        <h5>TB Kitap Misyonu</h5>
                         <p>Kuatek, Kuatech Bilişim Teknolojileri A.Ş Kuruluşudur. kuatek.com,
                             Türkiye’nin ilk ve Tek Berber ve Kuaförlere özel pazaryeridir. Yazılımcı uzman kadrosu ve pazarlama
                             ekibiyle en son yenilikleri ve trendleri müşterilerimizle paylaşmaktadır.
@@ -99,7 +98,7 @@
                             <li><a href="{{ route('login') }}">Giriş Yap</a></li>
                             <li><a href="{{ route('sepet') }}">Sepetim</a></li>
                             <li><a href="#">Favorilerim</a></li>
-                            <li><a href="https://kargotakip.sendeo.com.tr/kargo-takip-popup" target="_blank">Kargo Takip</a></li>
+                            <li><a href="" target="_blank">Kargo Takip</a></li>
                             <li><a href="#">Yardım</a></li>
                         </ul>
                     </div>
