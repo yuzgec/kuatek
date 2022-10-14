@@ -26,9 +26,9 @@
             {{ $item->title }}
         </h3>
         <div class="product-price">
-            {{ money($item->price) }}₺
+            <span class="new-price">  {{ money($item->price) }}₺</span>
+            <span class="old-price">  {{ money($item->old_price) }}₺</span>
         </div>
-
     </div>
 
     <div class="product-action">

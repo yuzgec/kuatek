@@ -20,7 +20,10 @@
                 <div class="form-group mb-3 row">
                     <label class="form-label col-3 col-form-label">Ürün Kodu</label>
                     <div class="col-9">
-                        <input type="text" class="col-9 form-control" name="sku">
+                        <input type="text" class="col-9 form-control @if($errors->has('sku')) is-invalid @endif" name="sku">
+                        @if($errors->has('sku'))
+                            <div class="invalid-feedback" style="display: block">{{$errors->first('sku')}}</div>
+                        @endif
                     </div>
                 </div>
 
@@ -105,7 +108,10 @@
                     <div class="col-3">
                         <div class="input-group mb-2">
                             <span class="input-group-text">₺</span>
-                            <input type="text" class="form-control" name="price" placeholder="Fiyat Giriniz" autocomplete="off" value="{{ old('price') }}" required>
+                            <input type="text" class="form-control  @if($errors->has('sku')) is-invalid @endif" name="price" placeholder="Fiyat Giriniz" autocomplete="off" value="{{ old('price') }}">
+                            @if($errors->has('price'))
+                                <div class="invalid-feedback" style="display: block">{{$errors->first('price')}}</div>
+                            @endif
                         </div>
                     </div>
                     <div class="col-3">

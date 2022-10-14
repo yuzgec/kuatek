@@ -81,7 +81,7 @@
                             </h3>
 
                             <div class="product-price">
-                                {{ $item->price }}₺
+                                {{ money($item->price) }}₺
                             </div>
 
                             <a href="{{ route('urun' , $item->slug)}}" class="btn btn-primary">
