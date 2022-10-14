@@ -382,7 +382,7 @@ class HomeController extends Controller
         SEOTools::setDescription('Tb Kitap Detaylı 2. El Kitap Klübü Arama Sayfası');
 
         $Favorite = Favorite::select('product_id')->where('user_id', auth()->user()->id)->get()->toArray();
-        $FavoriteBooks = Product::select('id', 'title', 'price', 'old_price', 'slug','bestselling','status', 'condition')
+        $FavoriteBooks = Product::select('id', 'title', 'price', 'old_price', 'slug','bestselling','status')
         ->whereIn('id', $Favorite)->get();
         return view('frontend.shop.favori', compact('Favorite', 'FavoriteBooks'));
     }
@@ -427,7 +427,7 @@ class HomeController extends Controller
             return redirect()->route('go');
         }
         $Favorite = Favorite::select('product_id')->where('user_id', auth()->user()->id)->get()->toArray();
-        $FavoriteBooks = Product::select('id', 'title', 'price', 'old_price', 'slug','bestselling','status', 'condition')
+        $FavoriteBooks = Product::select('id', 'title', 'price', 'old_price', 'slug','bestselling','status')
             ->whereIn('id', $Favorite)->get();
 
         return view('frontend.dashboard.index', compact('FavoriteBooks'));
