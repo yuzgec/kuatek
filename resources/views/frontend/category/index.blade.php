@@ -6,7 +6,6 @@
         <div class="container">
             <h1 class="page-title">
                 {{ $Detay->title }}
-                <span>TB Kitap</span>
             </h1>
         </div>
     </div>
@@ -30,13 +29,6 @@
                                         <option value="popularity" selected="selected">Yeni Eklenenler</option>
                                         <option value="rating">Düşük Fiyat</option>
                                         <option value="date">Yüksek Fiyat</option>
-                                        <option value="date">Eser Adı A-Z</option>
-                                        <option value="date">Eser Adı Z-A</option>
-                                        <option value="date">Yazar Adı A-Z</option>
-                                        <option value="date">Yazar Adı Z-A</option>
-                                        <option value="date">Basım Tarihi Eski</option>
-                                        <option value="date">Basım Tarihi Yeni</option>
-                                        <option value="date">Yeni Gelenler</option>
                                     </select>
                                 </div>
                             </div>
@@ -89,125 +81,7 @@
                                 </div>
                             </div>
                         </div>
-                        <form method="get">
-                            <div class="widget">
-                                <h3 class="widget-title">Dİl</h3>
 
-                                <div class="widget-body">
-
-                                    <select class="form-control single" data-placeholder="Dİl Seçiniz" name="dil">
-                                        <option value="">Dİl Seçiniz</option>
-                                        @foreach($Language as $item)
-                                            <option value="{{ $item->id }}">
-                                                {{  $item->title }}
-                                            </option>
-                                        @endforeach
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div class="widget">
-                                <h3 class="widget-title">Yayınevi</h3>
-                                <div class="widget-body">
-                                    <select class="form-control single" data-placeholder="Yayınevi Seçiniz" name="yayinevi">
-                                        <option value="">Yayınevi Seçiniz</option>
-                                        @foreach($Publisher as $item)
-                                            <option value="{{ $item->id }}">
-                                                {{  $item->title }}
-                                            </option>
-                                        @endforeach
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div class="widget">
-                                <h3 class="widget-title">Basım Yılı</h3>
-                                <div class="widget-body">
-                                    <select class="form-control single" data-placeholder="Yıl Seçiniz" name="yil">
-                                        <option value="">Yıl Seçiniz</option>
-                                        @foreach($Years as $item)
-                                            <option value="{{ $item->id }}">
-                                                {{  $item->title }}
-                                            </option>
-                                        @endforeach
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div class="widget">
-                                <h3 class="widget-title">Kondisyon</h3>
-
-                                <div class="widget-body">
-                                    <div class="filter-items">
-                                        <div class="filter-item">
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="cus-rating-1" name="kondisyon">
-                                                <label class="custom-control-label" for="cus-rating-1">
-                                                    <span class="ratings-container">
-                                                        <span class="ratings">
-                                                            <span class="ratings-val" style="width: 100%;"></span>
-                                                        </span>
-                                                    </span>
-                                                </label>
-                                            </div>
-                                        </div>
-
-                                        <div class="filter-item">
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="cus-rating-2" name="kondisyon">
-                                                <label class="custom-control-label" for="cus-rating-2">
-                                                    <span class="ratings-container">
-                                                        <span class="ratings">
-                                                            <span class="ratings-val" style="width: 80%;"></span>
-                                                        </span>
-                                                    </span>
-                                                </label>
-                                            </div>
-                                        </div>
-
-                                        <div class="filter-item">
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="cus-rating-3" name="kondisyon">
-                                                <label class="custom-control-label" for="cus-rating-3">
-                                                    <span class="ratings-container">
-                                                        <span class="ratings">
-                                                            <span class="ratings-val" style="width: 60%;"></span>
-                                                        </span>
-                                                    </span>
-                                                </label>
-                                            </div>
-                                        </div>
-
-                                        <div class="filter-item">
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="cus-rating-4" name="kondisyon">
-                                                <label class="custom-control-label" for="cus-rating-4">
-                                                    <span class="ratings-container">
-                                                        <span class="ratings">
-                                                            <span class="ratings-val" style="width: 40%;"></span>
-                                                        </span>
-                                                    </span>
-                                                </label>
-                                            </div>
-                                        </div>
-
-                                        <div class="filter-item">
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="cus-rating-5" name="kondisyon">
-                                                <label class="custom-control-label" for="cus-rating-5">
-                                                    <span class="ratings-container">
-                                                        <span class="ratings">
-                                                            <span class="ratings-val" style="width: 20%;"></span>
-                                                        </span>
-                                                    </span>
-                                                </label>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
                     </div>
                 </aside>
             </div>
