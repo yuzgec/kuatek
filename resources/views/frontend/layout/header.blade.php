@@ -27,7 +27,7 @@
                     <form action="{{ route('search') }}" method="get">
                         <div class="header-search-wrapper search-wrapper-wide">
                             <label for="q" class="sr-only">Arama</label>
-                            <input type="search" class="form-control" name="q" asd placeholder="Kitap Ara ..." required>
+                            <input type="search" class="form-control" name="q" asd placeholder="Ürün Ara ..." required>
                             <button class="btn btn-primary" type="submit"><i class="icon-search"></i></button>
                         </div>
                     </form>

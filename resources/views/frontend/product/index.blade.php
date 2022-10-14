@@ -62,60 +62,6 @@
                                     </p>
                                     @endif
                                 </div>
-                            <div class="product-content" >
-                                <table class="table table-striped table-hover table-sm table-bordered">
-                                    <tbody>
-                                        @foreach($Author as $item)
-                                        <tr>
-                                            <td style="width:30%"><b  class="ml-3">Yazar</b></td>
-                                            <td><a href="{{ route('yazar', $item->slug) }}" class="ml-3" title="{{ $item->title }}"> {{ $item->title }}</a></td>
-                                        </tr>
-                                        @endforeach
-                                        @if($Detay->getTranslator)
-                                        <tr>
-                                            <td style="width:30%"><b  class="ml-3">Çevirmen</b></td>
-                                            <td><span class="ml-3">{{ $Detay->getTranslator->title }}</span></td>
-                                        </tr>
-                                        @endif
-                                        @if($Detay->getLanguage)
-                                        <tr>
-                                            <td style="width:30%"><b  class="ml-3">Dili</b></td>
-                                            <td><span class="ml-3">{{ $Detay->getLanguage->title }}</span></td>
-                                        </tr>
-                                        @endif
-                                        @if($Detay->getPublisher)
-                                            <tr>
-                                                <td style="width:30%"><b  class="ml-3">Yayınevi</b></td>
-                                                <td><a href="{{ route('yayinevi', $Detay->getPublisher->slug) }}" class="ml-3"
-                                                       title="({{$Detay->get_publisher_count}}) adet kitap bulunmaktadır.">
-                                                        {{ $Detay->getPublisher->title }} ({{$Detay->get_publisher_count}})
-                                                    </a>
-                                                </td>
-                                            </tr>
-                                        @endif
-                                        <tr>
-                                            <td style="width:30%"><b  class="ml-3">Kitap Kodu</b></td>
-                                            <td><span class="ml-3">{{ $Detay->sku }}</span></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-
-                                @if($Detay->condition)
-                                <div class="d-flex" style="margin-top:-10px">
-                                    <div>Kondisyon : </div>
-                                      <div class="ratings-container align-items-center justify-content-center"
-                                           style="margin-top:5px">
-                                        <div class="ratings d-flex">
-                                            <div class="ratings-val"
-                                                 style="width: {{ condition($Detay->condition) }}%"
-                                                 title="{{ conditionText($Detay->condition) }}">
-                                            </div>
-                                            <h6 class="kondisyon">{{ conditionText($Detay->condition) }}</h6>
-                                        </div>
-                                    </div>
-                                </div>
-                                @endif
-                            </div>
 
                             <div style="margin-top:-30px">
                                 <i class="icon-truck"></i> Bugün <b>({{$Count}})</b> kişi baktı<br>
@@ -247,24 +193,7 @@
                                 </div>
                             </div>
                         </div>
-                        @foreach($Author as $item)
-                        <div class="card card-box card-sm">
-                            <div class="card-header" id="product-shipping-heading">
-                                <h2 class="card-title">
-                                    <a class="collapsed" role="button" data-toggle="collapse" href="#{{$item->slug}}" aria-expanded="true" aria-controls="product-accordion-shipping">
-                                        {{ $item->title }}
-                                    </a>
-                                </h2>
-                            </div>
-                            <div id="{{$item->slug}}" class="collapse show" aria-labelledby="product-shipping-heading" data-parent="#product-accordion">
-                                <div class="card-body">
-                                    <div class="product-desc-content">
-                                        {!! $item->desc !!}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        @endforeach
+
                     </div>
                 </div>
                 </div>

@@ -29,17 +29,7 @@
             {{ money($item->price) }}₺
         </div>
 
-
-        <div class="ratings-container">
-            <div class="ratings">
-                <div class="ratings-val" style="width: {{ condition($item->condition) }}%"
-                     title="{{ conditionText($item->condition) }}"></div>
-            </div>
-            <span class="ratings-text">( {{ conditionText($item->condition) }} )</span>
-        </div>
     </div>
-
-
 
     <div class="product-action">
         <a href="{{ route('urun' , $item->slug)}}"
