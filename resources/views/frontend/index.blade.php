@@ -102,7 +102,7 @@
     </div>
 
     <div class="mb-6"></div>
-    <div class="container" id="kitaplar">
+    <div class="container" id="urunler">
         <div class="row">
             @foreach($Product as $item)
                 <div class="col-6 col-md-3">

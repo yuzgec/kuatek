@@ -38,7 +38,7 @@ class ViewShareProvider extends ServiceProvider
                 ->where('status',1)
                 ->orderBy('rank')
                 ->paginate(30)
-                ->fragment('uunler');
+                ->fragment('urunler');
 
             View::share([
                 'Pages' => $Pages,
