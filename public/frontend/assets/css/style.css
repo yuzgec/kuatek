@@ -1567,7 +1567,7 @@ blockquote {
   .tip.tip-new {
     background-color: #a6c76c; }
   .tip.tip-hot {
-    background-color: #ffc107; }
+    background-color: #000000; }
 
 /* Header Bottom  - Menu position in header-bottom */
 .header-bottom .main-nav {
@@ -5627,7 +5627,7 @@ a:focus {
     text-overflow: ellipsis; }
   .product-countdown .countdown-amount {
     display: inline-block;
-    color: #ffc107;
+    color: #000000;
     font-weight: 500;
     font-size: 1.8rem;
     letter-spacing: -.03em;
@@ -5722,7 +5722,7 @@ a:focus {
   margin-bottom: 1.3rem; }
 
 .new-price {
-  color: #ffc107;
+  color: #000000;
   margin-right: .8rem; }
 
 .old-price {
@@ -5756,7 +5756,7 @@ a:focus {
     top: 5rem; }
   .product-label.label-sale {
     color: #fff;
-    background-color: #ffc107; }
+    background-color: #000000; }
   .product-label.label-new {
     color: #fff;
     background-color: #a6c76c; }
@@ -6525,7 +6525,7 @@ a:focus {
   letter-spacing: -.01em; }
 .product.product-10 .product-label.label-deal {
   color: #fff;
-  background-color: #ffc107;
+  background-color: #000000;
   padding: .5rem 2rem;
   left: 0;
   box-shadow: 0 5px 10px rgba(34, 34, 34, 0.2); }
@@ -11514,7 +11514,7 @@ button:focus {
   color: #a6c76c; }
 
 .out-of-stock {
-  color: #ffc107; }
+  color: #000000; }
 
 .btn-remove {
   display: inline-flex;
