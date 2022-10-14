@@ -74,7 +74,7 @@
                 <div class="col-lg-6">
                     <div class="deal">
                         <div class="deal-content">
-                            <h4>Kampanyalı Kitap</h4>
+                            <h4>Kampanyalı Ürün</h4>
                             <h3 class="product-title">
                                 <a href="{{ route('urun' , $item->slug)}}" title="{{ $item->title }}">
                                 {{ $item->title }}
