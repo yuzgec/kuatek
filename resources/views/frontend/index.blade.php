@@ -112,7 +112,7 @@
         </div>
         <div class="row ">
             <div class="col-12 d-flex align-items-center justify-content-center">
-                {{ $Product->appends(['siralama' => 'kitap' ]) }}
+                {{ $Product->appends(['siralama' => 'urunler' ]) }}
             </div>
         </div>
 
