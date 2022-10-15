@@ -111,7 +111,7 @@ class HomeController extends Controller
             ->where(['category_id' => $Detay->id])
             ->select('products.id','products.title','products.rank','products.slug','products.price','products.old_price','products.slug','product_category_pivots.category_id', 'product_categories.parent_id')
             ->orderBy('products.rank','ASC')
-            ->paginate(9);
+            ->paginate(18);
         //dd($ProductList);
 
 
