@@ -297,7 +297,7 @@
             </div>
         </div>
     </div>
-    <a href="https://api.whatsapp.com/send?phone=905350141875&text={{ $Detay->title }} isimli kitabı satın almak istiyorum. {{ route('urun', $Detay->slug) }}" class="whatsapp" target="_blank">
+    <a href="https://api.whatsapp.com/send?phone=905380964455&text={{ $Detay->title }} isimli ürünü satın almak istiyorum. {{ route('urun', $Detay->slug) }}" class="whatsapp" target="_blank">
         <i class="icon-whatsapp my-float"></i>
     </a>
 @endsection
