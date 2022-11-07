@@ -1,6 +1,6 @@
 <div class="notification text-center" style="background-image: url(/frontend/assets/images/notification-back.jpg)">
     <div class="notify-content">
-        <h3>100₺ ve üzeri tüm siparişlerinizde Türkiye'nin her yerine ücretsiz kargo!</h3>
+        <h3>{{CARGO_LIMIT}}₺ ve üzeri tüm siparişlerinizde Türkiye'nin her yerine ücretsiz kargo!</h3>
     </div>
     <div class="notify-action">
         <a href="#"><i class="icon-close  d-none d-lg-block"></i></a>
