@@ -5,9 +5,9 @@
     define('SWEETALERT_MESSAGE_CREATE', 'Eklendi');
     define('SWEETALERT_MESSAGE_UPDATE', 'Güncellendi');
     define('SWEETALERT_MESSAGE_DELETE', 'Silindi');
-    define('CARGO_LIMIT', 200);
+    define('CARGO_LIMIT', 300);
     define('CARGO_PRICE', 17.90);
-    define('MAIL_SEND', 'siparis@kiblegahaileoyunlari.com.tr');
+    define('MAIL_SEND', 'olcayy@gmail.com');
 
     function cartControl($id, $text = null){
         foreach (Cart::instance('shopping')->content() as $c){

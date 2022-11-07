@@ -21,7 +21,7 @@
                         </span>
                         <div class="icon-box-content">
                             <h3 class="icon-box-title">Ücretsiz Kargo</h3>
-                            <p>99.00₺ ve üzeri</p>
+                            <p>{{ CARGO_LIMIT }}₺ ve üzeri</p>
                         </div>
                     </div>
                 </div>
