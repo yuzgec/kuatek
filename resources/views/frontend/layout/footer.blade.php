@@ -44,16 +44,14 @@
             <div class="row">
                 <div class="col-sm-12 col-lg-6">
                     <div class="widget widget-about">
-                        <p>Kuatek, Kuatech Bilişim Teknolojileri A.Ş Kuruluşudur. kuatek.com,
-                            Türkiye’nin ilk ve Tek Berber ve Kuaförlere özel pazaryeridir. Yazılımcı uzman kadrosu ve pazarlama
-                            ekibiyle en son yenilikleri ve trendleri müşterilerimizle paylaşmaktadır.
+                        <p>KuateK Kuaför Tekstili 1989 Yılından Beri Sektöre Hizmet vermektedir. Başta Penuar, Önlük, ve Havlu, olmak üzere daha birçok alanda üretim yapmaktadır. Yıllık 3.000.000 Üretim Kapasitesine Sahiptir.
                         </p>
                         <div class="widget-about-info">
                             <div class="row">
                                 <div class="col-sm-12 col-12 d-flex">
                                     <div>
                                         <span class="widget-about-title">Müşteri Hizmetleri</span>
-                                        <a href="tel:0212 212 12 12">0212 212 12 12</a>
+                                        <a href="tel:0212 212 12 12">0538 096 44 55</a>
                                     </div>
 
                                 </div>
@@ -121,7 +119,7 @@
                     <i class="icon-facebook-f"></i></a>
                 <a href="https://www.twitter.com/kuatek" class="social-icon social-twitter" title="Twitter" target="_blank">
                     <i class="icon-twitter"></i></a>
-                <a href="https://www.instagram.com/kuatek" class="social-icon social-instagram" title="Instagram" target="_blank">
+                <a href="https://www.instagram.com/kuatek_" class="social-icon social-instagram" title="Instagram" target="_blank">
                     <i class="icon-instagram"></i></a>
             </div>
         </div>

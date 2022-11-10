@@ -18,7 +18,7 @@
                         <table class="table table-cart table-mobile">
                             <thead>
                             <tr>
-                                <th>Kitap</th>
+                                <th>Ürün</th>
                                 <th>Fiyat</th>
                                 <th>Stok</th>
                                 <th>Sepete Ekle</th>
@@ -72,7 +72,7 @@
                             </tbody>
                         </table>
                         @else
-                            <div class="alert alert-warning">Henüz Kitap eklenmemiş</div>
+                            <div class="alert alert-warning">Henüz Ürün eklenmemiş</div>
                         @endif
                     </div>
 
