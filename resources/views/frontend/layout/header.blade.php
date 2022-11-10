@@ -17,7 +17,7 @@
                 </button>
 
                 <a href="{{ route('home') }}" class="logo">
-                    <img src="{{asset('/frontend/assets/images/logo.png')}}" width="100px">
+                    <img src="{{asset('/frontend/assets/images/logo.jpg')}}" width="200px">
                 </a>
             </div>
 

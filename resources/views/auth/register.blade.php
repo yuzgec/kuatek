@@ -35,7 +35,7 @@
                         <div class="row">
                             <label for="email" class="col-md-4 col-form-label text-md-end">Telefon Numaranız</label>
                             <div class="col-md-6">
-                                <input id="email" type="text" class="form-control @error('phone') is-invalid @enderror" name="email" value="{{ old('phone') }}">
+                                <input type="text" class="form-control @error('phone') is-invalid @enderror" name="phone" value="{{ old('phone') }}">
                                 @error('phone')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>

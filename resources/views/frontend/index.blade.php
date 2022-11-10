@@ -3,10 +3,12 @@
     @include('backend.layout.alert')
     <div class="intro-slider-container">
         <div class="owl-carousel owl-simple owl-light owl-nav-inside" data-toggle="owl" data-owl-options='{"nav": true,"height":400px}'>
-            <div class="intro-slide"
-                 style="background-image: url(https://www.malzemeadasi.com/images/sliderImage/1920/sliderImage_618e66b12a0eb.jpg);">
+            <div class="intro-slide">
+                 <img src="https://www.malzemeadasi.com/images/sliderImage/1920/sliderImage_618e66b12a0eb.jpg">
             </div>
-
+            <div class="intro-slide">
+                <img src="https://www.malzemeadasi.com/images/sliderImage/1920/sliderImage_618e64fcf20af.jpg">
+            </div>
         </div>
         <span class="slider-loader text-white"></span>
     </div>
