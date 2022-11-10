@@ -109,7 +109,7 @@
 
     <div class="footer-bottom">
         <div class="container">
-            <p class="footer-copyright">Copyright © 2022 Kitap Store. Tüm Hakları Saklıdır.</p>
+            <p class="footer-copyright">Copyright © 2022 Kuatek. Tüm Hakları Saklıdır.</p>
             <ul class="footer-menu">
                 <li><a href="#">Kvkk Bilgilendirme Metni</a></li>
                 <li><a href="#">Gizlilik Politası</a></li>
