@@ -109,8 +109,8 @@
         <div class="container">
             <p class="footer-copyright">Copyright © 2022 Kuatek. Tüm Hakları Saklıdır.</p>
             <ul class="footer-menu">
-                <li><a href="#">Kvkk Bilgilendirme Metni</a></li>
-                <li><a href="#">Gizlilik Politası</a></li>
+                <li><a href="https://www.kuatek.com/kurumsal/kisisel-verilern-korunmasi-kanunu">Kvkk Bilgilendirme Metni</a></li>
+                <li><a href="https://www.kuatek.com/kurumsal/gizlilik-politikasi">Gizlilik Politası</a></li>
             </ul>
 
             <div class="social-icons social-icons-color">
