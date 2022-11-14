@@ -572,7 +572,7 @@ a:focus {
 .menu li:hover > a,
 .menu li.show > a,
 .menu li.active > a {
-  color: #f1f6f9; }
+  color: #000; }
 
 .demo-item a:hover, .demo-item a:focus {
   color: #000; }

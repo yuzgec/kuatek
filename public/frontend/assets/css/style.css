@@ -2263,7 +2263,7 @@ p {
     .header-2 .header-bottom .menu ul, .header-2 .header-bottom .menu .megamenu {
       margin-top: 0; }
     .header-2 .header-bottom .menu > li:not(:hover):not(.active):not(.show) > a {
-      color: #fff; }
+      color: #000; }
     .header-2 .header-bottom .mobile-menu-toggler {
       color: #fff; }
 
