@@ -37,6 +37,7 @@ class ViewShareProvider extends ServiceProvider
                 ->select('id', 'title', 'price', 'old_price', 'slug','bestselling','status')
                 ->where('status',1)
                 ->orderBy('rank')
+                ->inRandomOrder()
                 ->paginate(30)
                 ->fragment('urunler');
 
