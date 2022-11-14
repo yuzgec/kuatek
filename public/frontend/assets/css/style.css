@@ -1752,8 +1752,7 @@ blockquote {
       width: 694px; }
     @media screen and (min-width: 1200px) {
       .menu-vertical .megamenu:not(.megamenu-sm):not(.megamenu-md) {
-        width: 600px;
-        min-height: 100%; } }
+        width: 500px; } }
     .menu-vertical .megamenu > ul,
     .menu-vertical .megamenu div > ul {
       display: block;

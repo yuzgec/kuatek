@@ -149,7 +149,7 @@
                                     @if($Product_Categories->where('parent_id' , $item->id)->count() > 0)
                                     <div class="megamenu">
                                         <div class="row no-gutters">
-                                            <div class="col-md-5">
+                                            <div class="col-md-12">
                                                 <div class="menu-col">
                                                     <div class="row">
                                                         <div class="col-md-6">
@@ -160,18 +160,19 @@
                                                                 @endforeach
                                                             </ul>
                                                         </div>
+                                                        <div class="col-md-6">
+                                                            <div class="banner banner-overlay">
+                                                                <a href="https://www.kuatek.com/kategori/penuar/1cape-penuar?id=11" class="banner banner-menu">
+                                                                    <img src="http://malzemeadasi.test/banner-4.jpg" alt="Banner">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                     </div>
                                                 </div>
                                             </div>
 
-                                            <div class="col-md-3">
-                                                <div class="banner banner-overlay">
-                                                    <a href="https://www.kuatek.com/kategori/penuar/1cape-penuar?id=11" class="banner banner-menu">
-                                                        <img src="http://malzemeadasi.test/banner-4.jpg" alt="Banner">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
+
                                     </div>
                                     @endif
                                 </li>
