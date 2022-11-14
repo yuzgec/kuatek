@@ -76,11 +76,62 @@
                 </div>
             </div>
         </div>
-        <hr class="mt-2 mb-0">
     </div>
 
+    <div class="container">
 
-    <div class="deal-container pt-5">
+        <div class="row cat-banner-row electronics">
+            <div class="col-12 col-md-2">
+                <div class="cat-banner row no-gutters">
+                    <div class="cat-banner-list col-sm-12 d-xl-none d-xxl-flex" style="background-image: url(/frontend/assets/images/banner-bg-1.jpg);">
+                        <div class="banner-list-content p-5">
+                            <h3><a href="#">Penuar</a></h3>
+                            <ul>
+                                @foreach($Product_Categories->where('parent_id' , 1) as $itemm)
+                                    <li><a href="{{ route('kategori', ['penuar', $itemm->slug,'id' => $itemm->id]) }}">{{ $itemm->title }}</a></li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-10">
+                <div class="owl-carousel owl-full carousel-equal-height carousel-with-shadow" data-toggle="owl"
+                     data-owl-options='{
+                                        "nav": true,
+                                        "dots": false,
+                                        "margin": 20,
+                                        "loop": false,
+                                        "responsive": {
+                                            "0": {
+                                                "items":2
+                                            },
+                                            "480": {
+                                                "items":2
+                                            },
+                                            "768": {
+                                                "items":3
+                                            },
+                                            "992": {
+                                                "items":3
+                                            },
+                                            "1200": {
+                                                "items":4
+                                            },
+                                            "1600": {
+                                                "items":4
+                                            }
+                                        }
+                                    }'>
+                        @foreach($Product->take(6) as $item)
+                            <x-shop.product-item :item="$item"/>
+                        @endforeach
+                </div><!-- End .owl-carousel -->
+            </div><!-- End .col-xl-9 -->
+        </div><!-- End .row cat-banner-row -->
+    </div>
+
+    <div class="deal-container">
         <div class="container">
             <div class="row">
                 @foreach($Product->take(2) as $item)
@@ -109,7 +160,6 @@
                     </div>
                 </div>
                 @endforeach
-
             </div>
         </div>
     </div>

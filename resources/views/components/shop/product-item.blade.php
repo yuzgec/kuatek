@@ -1,6 +1,9 @@
 <div class="product product-4 text-center">
     <span class="product-label label-circle label-new">Yeni</span>
     <figure class="product-media">
+        @if($item->status == 0)
+        <span class="product-label label-out">Out of Stock</span>
+        @endif
         <a href="{{ route('urun' , $item->slug)}}" title="{{ $item->title }}">
             <img class="img-fluid" src="{{ (!$item->getFirstMediaUrl('page')) ? '/resimyok.jpg' : $item->getFirstMediaUrl('page', 'thumb') }}" alt="{{ $item->title }}">
             @foreach($item->getMedia('gallery')->take(1) as $img)
