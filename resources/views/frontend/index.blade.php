@@ -1,7 +1,7 @@
 @extends('frontend.layout.app')
 @section('content')
     @include('backend.layout.alert')
-    <div class="intro-slider-container">
+    <div class="intro-slider-container d-none d-sm-block">
         <div class="owl-carousel owl-simple owl-light owl-nav-inside" data-toggle="owl" data-owl-options='{"nav": true,"height":400px}'>
             <div class="intro-slide">
                  <img src="https://www.malzemeadasi.com/images/sliderImage/1920/sliderImage_618e66b12a0eb.jpg">
@@ -13,60 +13,71 @@
         <span class="slider-loader text-white"></span>
     </div>
 
-    <div class="icon-boxes-container icon-boxes-separator bg-transparent">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-6 col-lg-3">
-                    <div class="icon-box icon-box-side">
+
+    <div class="container icon-boxes-section">
+        <div class="icon-boxes-container py-4 bg-transparent mb-2 mt-2">
+            <div class="owl-carousel carousel-simple owl-theme carousel-equal-height shadow-carousel row cols-1 cols-md-2 cols-lg-3 cols-xl-4"
+                 data-toggle="owl" data-owl-options='{
+                        "dots": true,
+                        "nav": false,
+                        "loop": false,
+                        "margin": 13,
+                        "responsive": {
+                            "0": {
+                                "items": 1
+                            },
+                            "575": {
+                                "items": 2
+                            },
+                            "992": {
+                                "items": 3
+                            },
+                            "1200": {
+                                "items": 4
+                            }
+                        }
+                    }'>
+
+                <div class="icon-box mb-0 d-md-flex align-items-center text-center  mx-md-0 mx-auto">
                         <span class="icon-box-icon text-primary">
                             <i class="icon-rocket"></i>
                         </span>
-                        <div class="icon-box-content">
-                            <h3 class="icon-box-title">Ücretsiz Kargo</h3>
-                            <p>{{ CARGO_LIMIT }}₺ ve üzeri</p>
-                        </div>
+                    <div class="icon-box-content">
+                        <h3 class="icon-box-title">Ücretsiz Kargo</h3>
+                        <p>{{ CARGO_LIMIT }}₺ ve üzeri</p>
                     </div>
                 </div>
-
-                <div class="col-sm-6 col-lg-3">
-                    <div class="icon-box icon-box-side">
+                <div class="icon-box mb-0 d-md-flex align-items-center text-center  mx-md-0 mx-auto">
                         <span class="icon-box-icon text-primary">
                             <i class="icon-rotate-left"></i>
                         </span>
-                        <div class="icon-box-content">
-                            <h3 class="icon-box-title">İade Garantisi</h3>
-                            <p>14 gün içinde iade imkanı</p>
-                        </div>
+                    <div class="icon-box-content">
+                        <h3 class="icon-box-title">İade Garantisi</h3>
+                        <p>14 gün içinde iade imkanı</p>
                     </div>
                 </div>
-
-                <div class="col-sm-6 col-lg-3">
-                    <div class="icon-box icon-box-side">
+                <div class="icon-box mb-0 d-md-flex align-items-center text-center  mx-md-0 mx-auto">
                         <span class="icon-box-icon text-primary">
                             <i class="icon-info-circle"></i>
                         </span>
-                        <div class="icon-box-content">
-                            <h3 class="icon-box-title">İndirimli Ürünler</h3>
-                            <p>%30 varan indirimler</p>
-                        </div>
+                    <div class="icon-box-content">
+                        <h3 class="icon-box-title">İndirimli Ürünler</h3>
+                        <p>%30 varan indirimler</p>
                     </div>
                 </div>
-
-                <div class="col-sm-6 col-lg-3">
-                    <div class="icon-box icon-box-side">
+                <div class="icon-box mb-0 d-md-flex align-items-center text-center  mx-md-0 mx-auto">
                         <span class="icon-box-icon text-primary">
                             <i class="icon-life-ring"></i>
                         </span>
-                        <div class="icon-box-content">
-                            <h3 class="icon-box-title">Müşteri Hizmetleri</h3>
-                            <p>Online Hızlı Müşteri Desteği</p>
-                        </div>
+                    <div class="icon-box-content">
+                        <h3 class="icon-box-title">Müşteri Hizmetleri</h3>
+                        <p>Online Hızlı Müşteri Desteği</p>
                     </div>
                 </div>
             </div>
         </div>
+        <hr class="mt-2 mb-0">
     </div>
-
 
 
     <div class="deal-container pt-5">
@@ -102,6 +113,44 @@
             </div>
         </div>
     </div>
+
+    <div class="banner-group">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="banner banner-overlay">
+                                <a href="https://www.kuatek.com/kategori/penuar/cocuk-penuar?id=13" title="Çocuk Penuarı">
+                                    <img src="{{'/banner-1.jpg'}}" alt="{{config('app.name')}}">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="banner banner-overlay banner-overlay-light">
+                                <a href="https://www.kuatek.com/kategori/penuar/baskisiz-penuar?id=8" title="Baskısız Penuar">
+                                    <img src="{{'/banner-2.jpg'}}" alt="{{config('app.name')}}">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="banner banner-large banner-overlay d-none d-sm-block">
+                        <a href="https://www.kuatek.com/kategori/penuar/dijital-baski-penuar?id=10" title="Dijital Bakılı Penuar">
+                            <img src="{{'/banner-3.jpg'}}" alt="{{config('app.name')}}">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 d-sm-none d-lg-block">
+                    <div class="banner banner-middle banner-overlay">
+                        <a href="https://www.kuatek.com/kategori/penuar/1cape-penuar?id=11" title="1Cape">
+                            <img src="{{'/banner-4.jpg'}}" alt="{{config('app.name')}}">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <div class="mb-6"></div>
     <div class="container" id="urunler">
