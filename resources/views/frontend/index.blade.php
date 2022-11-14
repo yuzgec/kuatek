@@ -13,6 +13,77 @@
         <span class="slider-loader text-white"></span>
     </div>
 
+    <div class="intro-slider-container .d-block d-sm-none">
+        <div class="owl-carousel owl-simple owl-light owl-nav-inside" data-toggle="owl" data-owl-options='{"nav": true,"height":320px}'>
+            <div class="intro-slide">
+                <img src="/frontend/assets/images/mobil1.jpg" class="img-fluid">
+            </div>
+            <div class="intro-slide">
+                <img src="/frontend/assets/images/mobil2.jpg" class="img-fluid">
+            </div>
+            <div class="intro-slide">
+                <img src="/frontend/assets/images/mobil3.jpg" class="img-fluid">
+            </div>
+        </div>
+        <span class="slider-loader text-white"></span>
+    </div>
+
+
+
+
+    <div class="container mt-5">
+
+        <div class="row cat-banner-row electronics">
+            <div class="col-12 col-md-3">
+                <div class="cat-banner row ">
+                    <div class="cat-banner-list col-sm-12" style="background-image: url(/frontend/assets/images/banner-bg-1.jpg);">
+                        <div class="banner-list-content p-5">
+                            <h3><a href="#">Penuar</a></h3>
+                            <ul>
+                                @foreach($Product_Categories->where('parent_id' , 1) as $itemm)
+                                    <li><a href="{{ route('kategori', ['penuar', $itemm->slug,'id' => $itemm->id]) }}">{{ $itemm->title }}</a></li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-9">
+                <div class="owl-carousel owl-full carousel-equal-height carousel-with-shadow" data-toggle="owl"
+                     data-owl-options='{
+                                        "nav": true,
+                                        "dots": false,
+                                        "margin": 20,
+                                        "loop": false,
+                                        "responsive": {
+                                            "0": {
+                                                "items":2
+                                            },
+                                            "480": {
+                                                "items":2
+                                            },
+                                            "768": {
+                                                "items":3
+                                            },
+                                            "992": {
+                                                "items":3
+                                            },
+                                            "1200": {
+                                                "items":4
+                                            },
+                                            "1600": {
+                                                "items":4
+                                            }
+                                        }
+                                    }'>
+                        @foreach($Product->take(6) as $item)
+                            <x-shop.product-item :item="$item"/>
+                        @endforeach
+                </div><!-- End .owl-carousel -->
+            </div><!-- End .col-xl-9 -->
+        </div><!-- End .row cat-banner-row -->
+    </div>
+
 
     <div class="container icon-boxes-section">
         <div class="icon-boxes-container py-4 bg-transparent mb-2 mt-2">
@@ -76,59 +147,6 @@
                 </div>
             </div>
         </div>
-    </div>
-
-    <div class="container">
-
-        <div class="row cat-banner-row electronics">
-            <div class="col-12 col-md-2">
-                <div class="cat-banner row no-gutters">
-                    <div class="cat-banner-list col-sm-12 d-xl-none d-xxl-flex" style="background-image: url(/frontend/assets/images/banner-bg-1.jpg);">
-                        <div class="banner-list-content p-5">
-                            <h3><a href="#">Penuar</a></h3>
-                            <ul>
-                                @foreach($Product_Categories->where('parent_id' , 1) as $itemm)
-                                    <li><a href="{{ route('kategori', ['penuar', $itemm->slug,'id' => $itemm->id]) }}">{{ $itemm->title }}</a></li>
-                                @endforeach
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-10">
-                <div class="owl-carousel owl-full carousel-equal-height carousel-with-shadow" data-toggle="owl"
-                     data-owl-options='{
-                                        "nav": true,
-                                        "dots": false,
-                                        "margin": 20,
-                                        "loop": false,
-                                        "responsive": {
-                                            "0": {
-                                                "items":2
-                                            },
-                                            "480": {
-                                                "items":2
-                                            },
-                                            "768": {
-                                                "items":3
-                                            },
-                                            "992": {
-                                                "items":3
-                                            },
-                                            "1200": {
-                                                "items":4
-                                            },
-                                            "1600": {
-                                                "items":4
-                                            }
-                                        }
-                                    }'>
-                        @foreach($Product->take(6) as $item)
-                            <x-shop.product-item :item="$item"/>
-                        @endforeach
-                </div><!-- End .owl-carousel -->
-            </div><!-- End .col-xl-9 -->
-        </div><!-- End .row cat-banner-row -->
     </div>
 
     <div class="deal-container">
@@ -222,7 +240,7 @@
         <hr class="mt-1 mb-6">
     </div>
 
-    @if(Cart::instance('lastLook')->content()->count()) > 0)
+ {{--   @if(Cart::instance('lastLook')->content()->count()) > 0)
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -290,6 +308,6 @@
             </div>
         </div>
     </div>
-    @endif
+    @endif--}}
 @endsection
 
