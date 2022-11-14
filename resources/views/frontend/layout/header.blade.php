@@ -145,7 +145,7 @@
                             <ul class="menu-vertical sf-arrows">
                                 @foreach($Product_Categories->where('parent_id' , 0) as $item)
                                 <li class="megamenu-container">
-                                    <a class="sf-with-ul" href="{{ route('kategori', [$item->slug, 'id' => $item->id]) }}">{{ $item->title }}</a>
+                                    <a class="@if($Product_Categories->where('parent_id' , $item->id)->count() > 0) ? sf-with-ul :  null @endif" href="{{ route('kategori', [$item->slug, 'id' => $item->id]) }}">{{ $item->title }}</a>
                                     @if($Product_Categories->where('parent_id' , $item->id)->count() > 0)
                                     <div class="megamenu">
                                         <div class="row no-gutters">
