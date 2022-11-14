@@ -149,7 +149,7 @@
                                     @if($Product_Categories->where('parent_id' , $item->id)->count() > 0)
                                     <div class="megamenu">
                                         <div class="row no-gutters">
-                                            <div class="col-md-3">
+                                            <div class="col-md-5">
                                                 <div class="menu-col">
                                                     <div class="row">
                                                         <div class="col-md-6">
