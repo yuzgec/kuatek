@@ -25,10 +25,14 @@
                             <div class="toolbox-sort">
                                 <label for="sortby">Sıralama:</label>
                                 <div class="select-custom">
-                                    <select name="sortby" id="sortby" class="form-control">
-                                        <option value="popularity" selected="selected">Yeni Eklenenler</option>
-                                        <option value="rating">Düşük Fiyat</option>
-                                        <option value="date">Yüksek Fiyat</option>
+
+                                    <select name="sortby" id="sortby" class="form-control" onchange="location = this.options[this.selectedIndex].value">
+                                        <option value="">Sıralama</option>
+                                        <option value="{{ url()->current() }}?id={{ $Detay->id }}&fiyat=asc" {{ (request('fiyat') == 'asc') ? 'selected' : null }}>Fiyat Artan</option>
+                                        <option value="{{ url()->current() }}?id={{ $Detay->id }}&fiyat=desc" {{ (request('fiyat') == 'desc') ? 'selected' : null }}>Fiyat Azalan</option>
+                                        <option value="{{ url()->current() }}?id={{ $Detay->id }}&yeni=asc" {{ (request('basimtarihi') == 'asc') ? 'selected' : null }}>Yeni Eklenenler</option>
+                                        <option value="{{ url()->current() }}?id={{ $Detay->id }}&coksatan=1" {{ (request('basimtarihi') == 'asc') ? 'selected' : null }}>Çok Satanlar</option>
+                                        <option value="{{ url()->current() }}?id={{ $Detay->id }}&indirim=1" {{ (request('indirim') == 1) ? 'selected' : null }}>İndirimdeki Ürünler</option>
                                     </select>
                                 </div>
                             </div>

@@ -103,6 +103,24 @@ class HomeController extends Controller
         SEOTools::setCanonical(route('urun', $Detay->slug));
         SEOTools::opengraph()->addProperty('type', 'category');
         SEOTools::jsonLd()->addImage($Detay->getFirstMediaUrl('page','thumb'));
+
+
+        $coksatan = request('coksatan')  ? request('coksatan') : 0;
+        $fiyat = request('fiyat')  ? request('fiyat') : 'desc';
+        $indirim = request('indirim')  ? request('indirim') : 0;
+
+        if(request()->filled('fiyat')){
+            $ProductList = Product::with(['getCategory'])
+                ->join('product_category_pivots', 'product_category_pivots.product_id', '=', 'products.id' )
+                ->join('product_categories', 'product_categories.id', '=', 'product_category_pivots.category_id')
+                ->where('product_category_pivots.category_id',  $Detay->id)
+                ->where('products.status', 1)
+                ->select('products.id','products.title','products.rank','products.slug','products.price','products.old_price','products.slug')
+                ->orderBy("price", $fiyat )
+                ->paginate(18);
+            return view('frontend.category.index', compact('Detay', 'ProductList'));
+        }
+
         $ProductList = Product::with(['getCategory'])
             ->join('product_category_pivots', 'product_category_pivots.product_id', '=', 'products.id' )
             ->join('product_categories', 'product_categories.id', '=', 'product_category_pivots.category_id')
@@ -110,7 +128,6 @@ class HomeController extends Controller
             ->where('products.status', 1)
             ->where(['category_id' => $Detay->id])
             ->select('products.id','products.title','products.rank','products.slug','products.price','products.old_price','products.slug','product_category_pivots.category_id', 'product_categories.parent_id')
-            ->orderBy('products.rank','ASC')
             ->paginate(18);
         //dd($ProductList);
 
