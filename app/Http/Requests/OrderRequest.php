@@ -10,13 +10,13 @@ class OrderRequest extends FormRequest
     public function rules()
     {
         return [
-            'name'                 => 'required|min:3|max:30|regex:/^[a-zA-ZşŞıİçÇöÖüÜĞğ]+$/',
-            'surname'              => 'required|min:2|max:30|regex:/^[a-zA-ZşŞıİçÇöÖüÜĞğ]+$/',
+            'name'                 => 'required|min:3|max:30|regex:/^[a-zA-ZşŞıİçÇöÖüÜĞğ\s]+$/',
+            'surname'              => 'required|min:2|max:30|regex:/^[a-zA-ZşŞıİçÇöÖüÜĞğ\s]+$/',
             'phone'                => 'required|numeric|digits_between:10,11',
             'address'              => 'required|min:25',
             'email'                => 'required|email',
             'province'             => 'required',
-            'city'                 => 'required|regex:/^[a-zA-ZşŞıİçÇöÖüÜĞğ]+$/',
+            'city'                 => 'required|regex:/^[a-zA-ZşŞıİçÇöÖüÜĞğ\s]+$/',
         ];
     }
 

@@ -175,7 +175,7 @@ class HomeController extends Controller
         $request->setLocale(\Iyzipay\Model\Locale::TR);
         $request->setConversationId($sepetId);
         $request->setPrice(Cart::instance('shopping')->total());
-        $request->setPaidPrice(1);
+        $request->setPaidPrice(cargoToplam(Cart::instance('shopping')->total()));
         $request->setCurrency(\Iyzipay\Model\Currency::TL);
         $request->setBasketId($sepetId);
         $request->setPaymentGroup(\Iyzipay\Model\PaymentGroup::PRODUCT);
