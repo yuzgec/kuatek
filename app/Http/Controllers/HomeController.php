@@ -21,7 +21,6 @@ use CyrildeWit\EloquentViewable\Support\Period;
 use Gloudemans\Shoppingcart\Facades\Cart;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
 use Artesaos\SEOTools\Facades\SEOTools;
@@ -40,6 +39,7 @@ class HomeController extends Controller
 
         return view('frontend.index', compact('Slider',  'Pivot'));
     }
+
     public function urun($url){
         $Detay = Product::with(['getCategory'])
             ->where('sku', \request('urunno'))
@@ -95,7 +95,10 @@ class HomeController extends Controller
 
         return view('frontend.product.index', compact('Detay','Count', 'Productssss', 'Pivot', 'Category', 'OtherCategory'));
     }
+
     public function kategori($url){
+
+
         $Detay = ProductCategory::where('id', \request('id'))->select('id','title','slug')->first();
         SEOTools::setTitle($Detay->title.' | Türkiye’nin ilk ve Tek Berber ve Kuaförlere özel pazaryeridir.');
         SEOTools::setDescription($Detay->seo_desc);
@@ -103,7 +106,6 @@ class HomeController extends Controller
         SEOTools::setCanonical(route('urun', $Detay->slug));
         SEOTools::opengraph()->addProperty('type', 'category');
         SEOTools::jsonLd()->addImage($Detay->getFirstMediaUrl('page','thumb'));
-
 
         $coksatan = request('coksatan')  ? request('coksatan') : 0;
         $fiyat = request('fiyat')  ? request('fiyat') : 'desc';
@@ -147,12 +149,14 @@ class HomeController extends Controller
         $Products = Product::select('id', 'title', 'price', 'old_price', 'slug', 'campagin_price')->orderBy('rank')->get();
         return view('frontend.shop.sepet',compact('Products'));
     }
+
     public function siparis(){
         if (Cart::instance('shopping')->content()->count() === 0){
             return redirect()->route('home');
         }
         return view('frontend.shop.siparis');
     }
+
     public function odeme(OrderRequest $gelen)
     {
 
@@ -236,6 +240,7 @@ class HomeController extends Controller
 
         return view('frontend.shop.odeme', compact('form', 'gelen'));
     }
+
     public function cekim(Request $gelen){
 
         if (request()->isMethod('get')) {
@@ -328,7 +333,6 @@ class HomeController extends Controller
 
     }
 
-
     public function addtocart(Request $request){
 
         if(auth()->check()){
@@ -355,6 +359,7 @@ class HomeController extends Controller
         toast(SWEETALERT_MESSAGE_CREATE,'success');
         return redirect()->route('sepet');
     }
+
     public function hizlisatinal(Request $request){
 
         Cart::instance('shopping')->destroy();
@@ -380,12 +385,14 @@ class HomeController extends Controller
         return redirect()->route('siparis');
 
     }
+
     public function favoriekle(Request $request){
         $p = Product::find($request->id);
         $New = Favorite::updateOrCreate(['user_id' => auth()->user()->id, 'product_id' => $p->id]);
         toast(SWEETALERT_MESSAGE_CREATE,'success');
         return redirect()->route('favori');
     }
+
     public function favori(){
         SEOTools::setTitle('Favori Listem | '. config('app.name'));
         SEOTools::setDescription('Türkiye’nin ilk ve Tek Berber ve Kuaförlere özel pazaryeridir.');
@@ -395,6 +402,7 @@ class HomeController extends Controller
         ->whereIn('id', $Favorite)->get();
         return view('frontend.shop.favori', compact('Favorite', 'FavoriteBooks'));
     }
+
     public function favoricikar($id){
         $Delete = Favorite::where('product_id',$id)->where('user_id', auth()->user()->id)->delete();
         toast(SWEETALERT_MESSAGE_DELETE,'success');
@@ -407,6 +415,7 @@ class HomeController extends Controller
         toast('Email Adresiz Bülten Listesine Eklendi','success');
         return redirect()->route('home');
     }
+
     public function kurumsal($url){
 
         $Detay = Page::where('slug', $url)->firstOrFail();
@@ -420,6 +429,7 @@ class HomeController extends Controller
 
         return view('frontend.page.index', compact('Detay'));
     }
+
     public function iletisim(){
 
         SEOTools::setTitle("İletişim | ". config('app.name'));
@@ -427,9 +437,11 @@ class HomeController extends Controller
 
         return view('frontend.page.contactus');
     }
+
     public function kargosorgulama(){
         return view('frontend.page.cargo');
     }
+
     public function profilim(){
 
         if (auth()->user()->is_admin == 1){

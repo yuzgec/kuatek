@@ -1,10 +1,8 @@
 <?php
 
-use App\Models\Product;
-use App\Models\ProductCategoryPivot;
-use App\Models\Publisher;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+
     Route::get('/', 'HomeController@index')->name('home');
     Route::get('/urun/{path}', 'HomeController@urun')->where('path', '.*')->name('urun');
     Route::get('/profilim', 'HomeController@profilim')->middleware('auth')->name('profilim');
@@ -54,5 +52,5 @@ Auth::routes();
         Route::auto('/product', ProductController::class);
         Route::auto('/product-categories', ProductCategoryController::class);
         Route::auto('/comment', CommentController::class);
-
+        Route::auto('/order', OrderController::class);
     });

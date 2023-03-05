@@ -23,6 +23,9 @@ class DashboardController extends Controller
         $Search = Search::select('key')->whereBetween('created_at', [Carbon::yesterday(),Carbon::today()])->paginate(10);
         $Product = Product::count();
         $Product_Categories = ProductCategory::count();
-        return view('backend.index', compact('Search', 'Product', 'Product_Categories'));
+
+        $Order = ShopCart::with('getOrder')->withCount('getOrder')->get();
+        //dd($Order);
+        return view('backend.index', compact('Search', 'Product', 'Product_Categories', 'Order'));
     }
 }
